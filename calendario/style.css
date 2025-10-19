@@ -1,0 +1,256 @@
+body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-image: url(img/fondo.jpg);
+  background-size: cover;
+  background-attachment: fixed ;
+  color: #333;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+}
+
+body > * {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 920px;
+  margin-left: auto;
+  margin-right: auto;
+  backdrop-filter: blur(6px);
+}
+
+input{
+    background-image: url(img/fonde\ de\ los\ dias.jpg);
+    
+}
+main{
+    flex: 1;
+    padding: 20px;
+}
+
+/* Tarjeta principal que agrupa los controles superiores */
+.top-bar {
+  background-image: url(img/inicio.jpeg);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px wheat;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: space-between;
+  position: relative; 
+  margin-top: 20px;
+}
+
+h1 {
+  margin: 0 0 10px 0;
+  font-size: 24px;
+  text-align: center;
+  color: white;
+}
+.goalForm{
+    background-image:url(img/fondo.jpg) ;
+    display: flex;
+    justify-content: space-between;
+    max-width: 600px;
+    border: 20px;
+    border-radius: 15px;
+    box-shadow: 0 2px 8px wheat;
+   
+    padding: 30px;
+    margin-top: 15px;
+    
+
+}
+
+
+.btn1{
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #00bfff;
+    color: white;
+    cursor: pointer;
+    
+}
+
+
+
+#monthYear {
+  font-size: 18px;
+  font-weight: 600;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+.metaMes{
+    width: 120px;
+    display: flex;
+    align-items: center;
+}
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  margin-top: 12px;
+  background-image: url(img/fonde\ de\ los\ dias.jpg);
+  padding: 12px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px wheat;
+}
+
+.day {
+  min-height: 48px;
+  background-image: url(img/botones.jpg);
+  color: white;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  transition: 0.15s;
+  font-weight: 600;
+}
+
+.day:hover {
+  transform: translateY(-3px);
+  background: #f0f4ff;
+}
+
+.day.done {
+  background: linear-gradient(90deg, #b6f0b6, #90ee90);
+  color: #064e00;
+}
+
+.day.missed {
+  background: linear-gradient(90deg, #ffc5c5, #ff9999);
+  color: #5a0000;
+}
+
+.statusPanel {
+  display: none;
+  margin-top: 12px;
+  background-image: url(img/cumpliste\ o\ no.jpg);
+  padding: 12px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px white;
+  color: wheat;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content:space-between;
+
+}
+
+#noteModal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  z-index: 50;
+}
+
+#noteModal .modal-content {
+  background: #fff;
+  padding: 16px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 480px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.btn {
+  border: none;
+  background: #e3e3e3;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 4px;
+  box-shadow: 0 2px 6px rgba(59, 130, 246, 0.12);
+  transition: transform 0.12s, box-shadow 0.12s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(59, 130, 246, 0.14);
+}
+
+
+#btnDone {
+  background: #16a34a;
+}
+#btnMissed {
+  background: #ef4444;
+}
+#btnCancel {
+  background: #6b7280;
+}
+
+#btnDone:hover {
+  box-shadow: 0 6px 16px rgba(22, 163, 74, 0.14);
+}
+#btnMissed:hover {
+  box-shadow: 0 6px 16px rgba(239, 68, 68, 0.14);
+}
+#btnCancel:hover {
+  box-shadow: 0 6px 16px rgba(107, 114, 128, 0.14);
+}
+
+#goalsList {
+  margin-top: 15px;
+  padding: 12px;
+  background-image: url(img/metames.jpg);
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px wheat;
+}
+
+#history {
+  margin-top: 20px;
+  background-image: url(img/history.jpg);
+  padding: 12px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px wheat;
+  color: white;
+  text-align: center;
+}
+
+
+@media (max-width: 480px) {
+  .calendar {
+    grid-template-columns: repeat(7, minmax(36px, 1fr));
+    gap: 6px;
+  }
+  .day {
+    min-height: 42px;
+  }
+  body > * {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .top-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+footer{
+  text-align: center;
+  padding: 15px;
+  color: white;
+  font-size: 14px;
+}
