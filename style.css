@@ -6,7 +6,7 @@ body {
   justify-content: flex-start;
   background-image: url(fondo.jpg);
   background-size: cover;
-  background-attachment: fixed ;
+  background-attachment: fixed;
   color: #333;
   min-height: 100vh;
   margin: 0;
@@ -22,13 +22,10 @@ body > * {
   backdrop-filter: blur(6px);
 }
 
-input{
-    background-image: url(fonde\ de\ los\ dias.jpg);
-    
-}
-main{
-    flex: 1;
-    padding: 20px;
+
+main {
+  flex: 1;
+  padding: 20px;
 }
 
 /* Tarjeta principal que agrupa los controles superiores */
@@ -42,7 +39,7 @@ main{
   align-items: center;
   gap: 12px;
   justify-content: space-between;
-  position: relative; 
+  position: relative;
   margin-top: 20px;
 }
 
@@ -52,33 +49,27 @@ h1 {
   text-align: center;
   color: white;
 }
-.goalForm{
-    background-image:url(fondo.jpg) ;
-    display: flex;
-    justify-content: space-between;
-    max-width: 600px;
-    border: 20px;
-    border-radius: 15px;
-    box-shadow: 0 2px 8px wheat;
-   
-    padding: 30px;
-    margin-top: 15px;
-    
 
+.goalForm {
+  background-image: url(fondo.jpg);
+  display: flex;
+  justify-content: space-between;
+  max-width: 600px;
+  border: 20px;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px wheat;
+  padding: 30px;
+  margin-top: 15px;
 }
 
-
-.btn1{
-    padding: 10px 15px;
-    border: none;
-    border-radius: 8px;
-    background-color: #00bfff;
-    color: white;
-    cursor: pointer;
-    
+.btn1 {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: #00bfff;
+  color: white;
+  cursor: pointer;
 }
-
-
 
 #monthYear {
   font-size: 18px;
@@ -88,11 +79,13 @@ h1 {
   transform: translateX(-50%);
   pointer-events: none;
 }
-.metaMes{
-    width: 120px;
-    display: flex;
-    align-items: center;
+
+.metaMes {
+  width: 120px;
+  display: flex;
+  align-items: center;
 }
+
 .calendar {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -144,8 +137,7 @@ h1 {
   display: flex;
   align-items: center;
   gap: 10px;
-  justify-content:space-between;
-
+  justify-content: space-between;
 }
 
 #noteModal {
@@ -188,7 +180,6 @@ h1 {
   box-shadow: 0 6px 16px rgba(59, 130, 246, 0.14);
 }
 
-
 #btnDone {
   background: #16a34a;
 }
@@ -229,7 +220,6 @@ h1 {
   text-align: center;
 }
 
-
 @media (max-width: 480px) {
   .calendar {
     grid-template-columns: repeat(7, minmax(36px, 1fr));
@@ -248,9 +238,117 @@ h1 {
   }
 }
 
-footer{
+footer {
   text-align: center;
   padding: 15px;
   color: white;
   font-size: 14px;
+}
+
+/* 🔹 Responsividad adicional sin modificar tu código original */
+
+/* Tablets (pantallas medianas) */
+@media (max-width: 768px) {
+  .goalForm {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 20px;
+  }
+
+  .metaMes {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .top-bar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+
+  #monthYear {
+    position: static;
+    transform: none;
+  }
+
+  .calendar {
+    grid-template-columns: repeat(7, minmax(42px, 1fr));
+  }
+
+  body {
+    background-size: contain;
+  }
+}
+
+/* Celulares (pantallas pequeñas) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 20px;
+  }
+
+  .goalForm {
+    padding: 15px;
+  }
+
+  .btn1,
+  .btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .calendar {
+    grid-template-columns: repeat(7, minmax(34px, 1fr));
+    gap: 4px;
+    padding: 8px;
+  }
+
+  .day {
+    min-height: 38px;
+    font-size: 12px;
+  }
+
+  .statusPanel {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .top-bar {
+    padding: 10px;
+  }
+
+  footer {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  body {
+    background-size: cover;
+    background-attachment: scroll;
+  }
+}
+
+/* Pantallas muy pequeñas (320px o menos) */
+@media (max-width: 360px) {
+  .calendar {
+    grid-template-columns: repeat(7, minmax(28px, 1fr));
+  }
+
+  .day {
+    font-size: 10px;
+    min-height: 30px;
+  }
+
+  .goalForm {
+    padding: 10px;
+  }
+
+  .btn1,
+  .btn {
+    font-size: 12px;
+    padding: 8px;
+  }
 }
